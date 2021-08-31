@@ -2,8 +2,8 @@
   "name": "my-site",
   "version": "1.0.0",
   "private": true,
-  "description": "mySite",
-  "author": "ManpreetBhatti",
+  "description": "Personal website of Manpreet Bhatti, a 3rd year computer science student at the University of Toronto Scarborough. If you'd like to see what I have to showcase, visit http://github.com/Manpreet-Bhatti",
+  "author": "Manpreet Bhatti",
   "keywords": [
     "gatsby"
   ],
@@ -15,6 +15,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "classnames": "^2.3.1",
     "gatsby": "^3.12.1",
     "gatsby-plugin-image": "^1.12.0",
     "gatsby-plugin-manifest": "^3.12.0",

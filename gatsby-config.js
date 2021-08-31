@@ -1,7 +1,12 @@
+const { author, keywords, description } = require(`./package.json`);
+// require("dotenv").config;
+
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
-    title: "mySite",
+    title: author,
+    description,
+    keywords,
+    author,
   },
   plugins: [
     "gatsby-plugin-react-helmet",
@@ -17,9 +22,8 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
-        path: "./src/images/",
+        path: `${__dirname}/src/images/`,
       },
-      __key: "images",
     },
   ],
 };
