@@ -6,8 +6,10 @@ import { useStaticQuery, graphql } from "gatsby";
 export default function Seo({ title, lang }) {
   const { site } = useStaticQuery(query);
 
-  if (!title) {
-    throw new Error("[Seo] is missing a title");
+  if (process.env.NODE_ENV === `development`) {
+    if (!title) {
+      throw new Error("[Seo] is missing a title");
+    }
   }
 
   return (
