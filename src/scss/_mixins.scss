@@ -1,0 +1,43 @@
+@use './units';
+
+// Add transitions to attributes
+@mixin transition($attrs, $speed: normal) {
+  $res: "";
+
+  // Multiple attributes
+  @if type-of($attrs) == list {
+    @each $attr in $attrs {
+      $res: #{$res}, _makeTransition($attr, $speed);
+    }
+  }
+  // One/no attribute
+  @else {
+    $res: _makeTransition($attr, $speed);
+  }
+
+  transition: $res;
+}
+
+@function _makeTransition($attr, $speed) {
+  $res: all map-get(units.$speed, $speed) cubic-bezier(0.4, 0, 0.2, 1);
+
+  // Attribute has default props
+  @if type-of($attr) == string {
+    $res: $attr map-get(units.$speed, $speed) cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  // Attribute has custom props
+  @else if type-of($attr) == map {
+    $speed: if(map-has-key($attr, speed), map-get($attr, speed), $speed);
+    $res: map-get($attr, name)
+      map-get(units.$speed, $speed)
+      cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  @return $res;
+}
+
+@mixin media($size) {
+  @media only screen and (max-width: map-get(units.$media, $size)) {
+    @content;
+  }
+}
