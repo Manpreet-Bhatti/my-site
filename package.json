@@ -9,10 +9,11 @@
   ],
   "scripts": {
     "develop": "gatsby develop",
-    "start": "gatsby develop",
+    "start": "gatsby develop && npm run generate",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "generate": "node ./genfiles"
   },
   "dependencies": {
     "classnames": "^2.3.1",
