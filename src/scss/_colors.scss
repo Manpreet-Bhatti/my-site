@@ -1,6 +1,6 @@
 @use './env';
 
-$primary: #ce2029;
+$primary: env.$primary;
 $background: #ffffff;
 $heading: #424242;
 $text: lighten($heading, 30%);
