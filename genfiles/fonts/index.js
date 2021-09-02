@@ -1,6 +1,6 @@
-import { mkdir, rmdir, readdir, readFile, writeFile } from "fs/promises";
-import { join } from "path";
-import { existsSync } from "fs";
+const fs = require("fs/promises");
+const path = require("path");
+const fss = require("fs");
 
 const IGNORE = ["index.js"];
 const FONTS = "./static/fonts";
@@ -26,26 +26,26 @@ const generate = (weight, files) => `@font-face {
       .join(", ")}
 }`;
 
-export default async function () {
-  if (!existsSync("./static")) {
-    await mkdir("./static");
+module.exports = async function () {
+  if (!fss.existsSync("./static")) {
+    await fs.mkdir("./static");
   }
 
-  await rmdir(FONTS, { recursive: true });
-  await mkdir(FONTS);
-  const folders = await readdir(__dirname).then((_) =>
-    _.filter((f) => !IGNORE.includes(f))
-  );
+  await fs.rmdir(FONTS, { recursive: true });
+  await fs.mkdir(FONTS);
+  const folders = await fs
+    .readdir(__dirname)
+    .then((_) => _.filter((f) => !IGNORE.includes(f)));
 
   const content = await Promise.all(
     folders.map(async (folder) => {
-      const files = await readdir(join(__dirname, folder));
-      await mkdir(join(FONTS, folder));
+      const files = await fs.readdir(path.join(__dirname, folder));
+      await fs.mkdir(path.join(FONTS, folder));
       await Promise.all(
         files.map((file) =>
-          readFile(join(__dirname, folder, file)).then((_) =>
-            writeFile(join(FONTS, folder, file), _)
-          )
+          fs
+            .readFile(path.join(__dirname, folder, file))
+            .then((_) => fs.writeFile(path.join(FONTS, folder, file), _))
         )
       );
 
@@ -53,5 +53,5 @@ export default async function () {
     })
   ).then((_) => _.join("\n"));
 
-  await writeFile("./src/scss/_fonts.scss", content);
-}
+  await fs.writeFile("./src/scss/_fonts.scss", content);
+};
