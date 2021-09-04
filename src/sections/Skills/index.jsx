@@ -1,26 +1,24 @@
 import React from "react";
-import { graphql, useStaticQuery } from "gatsby";
 import Section from "../../components/Section";
 import Text from "../../components/Text";
 import Link from "../../components/Link";
 import styles from "./Skills.module.scss";
+import { SkillsData } from "./data";
 
 export default function Skills() {
-  const { data } = useStaticQuery(query);
-
   return (
     <Section>
       <Text type="heading" as="h2">
         What I know...
       </Text>
       <ul className={styles.items}>
-        {data.content.map((item) => (
-          <li key={item.contentfulid}>
+        {SkillsData.map((skill, key) => (
+          <li key={key}>
             <Text className={styles.heading} type="subheading" as="h3">
-              {item.label}
+              {skill.title}
             </Text>
             <ul className={styles.skills}>
-              {item.items.map((i) => (
+              {skill.content.map((i) => (
                 <Text className={styles.skill} type="meta" key={i} as="li" bold>
                   {i}
                 </Text>
@@ -29,23 +27,9 @@ export default function Skills() {
           </li>
         ))}
       </ul>
-      <Text type="body" as="p" color="heading" className={styles.resume}>
-        Want to learn more? Check out <Link>my resume</Link>.
+      <Text as="p" type="body" color="heading" className={styles.more}>
+        Want to learn more? Check out <Link to="">my resume</Link>.
       </Text>
     </Section>
   );
 }
-
-const query = graphql`
-  {
-    data: contentfulQuerable(slug: { eq: "skills" }) {
-      content {
-        ... on ContentfulList {
-          contentfulid
-          label
-          items
-        }
-      }
-    }
-  }
-`;

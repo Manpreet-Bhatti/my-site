@@ -19,23 +19,18 @@ export default function About() {
           <Text className={styles.heading} type="subheading" as="h3">
             <span role="img" aria-label="man technologist">
               👨🏽‍💻
-            </span>
-            {/* Change this later */}
+            </span>{" "}
             Developer
           </Text>
           <Text type="body">
-            I'm currently a junior developer at{" "}
-            <Link to="http://www.ivedha.com/">iVedha</Link>, where work towards
-            creating an NLP search engine and chatbot to quicken support ticket
-            documentation and lookup.
+            I'm currently a developer at{" "}
+            <Link to="http://www.ivedha.com/">iVedha</Link>, where I work
+            towards creating a NLP search engine and chatbot to quicken support
+            ticket documentation and lookup.
           </Text>
         </li>
-        {/* <li>
-            <Text className={styles.heading} type='subheading' as='h3'>
-                <span></span>
-            </Text>
-        </li> */}
-        {/* Say something about hobbies */}
+        {/* Talk about helping the community and doing development */}
+        {/* Talk about hobby */}
       </ul>
     </Section>
   );

@@ -1,30 +1,28 @@
 import React from "react";
-import { graphql, useStaticQuery } from "gatsby";
 import Section from "../../components/Section";
 import Text from "../../components/Text";
 import Link from "../../components/Link";
 import styles from "./Contact.module.scss";
+import { ContactInfo } from "./data";
 
 export default function Contact() {
-  const { data } = useStaticQuery(query);
-
   return (
     <Section>
       <Text type="heading" as="h2">
         Let's Converse!
       </Text>
       <Text type="body" as="p">
-        Let's get in touch to converse about job opportunities and share
+        Let's get in touch to speak about job opportunities and share
         experiences!
       </Text>
       <ul className={styles.items}>
-        {data.content.map((item) => (
-          <li className={styles.item} key={item.contentfulid}>
+        {ContactInfo.map((contact, key) => (
+          <li className={styles.item} key={key}>
             <Text type="body" color="heading" as="h3">
-              {item.description.description}
+              {contact.title}
             </Text>
-            <Link className={styles.link} to={item.href} mask>
-              {item.label}
+            <Link className={styles.link} to={contact.link} mask>
+              {contact.content}
             </Link>
           </li>
         ))}
@@ -32,20 +30,3 @@ export default function Contact() {
     </Section>
   );
 }
-
-const query = graphql`
-  {
-    data: contentfulQuerable(slug: { eq: "contact-info-website" }) {
-      content {
-        ... on ContentfulLink {
-          contentfulid
-          description {
-            description
-          }
-          label
-          href
-        }
-      }
-    }
-  }
-`;
