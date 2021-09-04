@@ -1,11 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 export const ThemeContext = React.createContext({});
 
 export default function LightOrDark({ children }) {
   const suppMode = useState(() => {
     if (typeof window !== "undefined") {
       const display = window.localStorage.getItem("dark_mode");
-
       if (display) {
         return display === "true";
       } else if (window.matchMedia) {
@@ -15,8 +14,7 @@ export default function LightOrDark({ children }) {
     return false;
   });
 
-  const dark = suppMode;
-
+  const [dark] = suppMode;
   useEffect(() => {
     if (dark) {
       window.localStorage.setItem("dark_mode", true);
@@ -31,7 +29,7 @@ export default function LightOrDark({ children }) {
         document.body.classList.add("animate");
       }, 0);
     }
-  }, dark);
+  }, [dark]);
 
   return (
     <ThemeContext.Provider value={suppMode}>{children}</ThemeContext.Provider>

@@ -2,12 +2,13 @@ import React from "react";
 import Container from "../Container";
 import Text from "../Text";
 import styles from "./Footer.module.scss";
+import Heart from "../../images/heart.svg";
 
 export default function Footer() {
   return (
     <Container contentClassName={styles.container} as="footer">
       <Text type="meta" bold>
-        Made with by Manpreet Bhatti
+        Made with <Heart className={styles.heart} /> by Manpreet Bhatti
       </Text>
       <Text
         onClick={() => window.scroll({ top: 0, behavior: "smooth" })}

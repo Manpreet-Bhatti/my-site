@@ -11,21 +11,9 @@ export default function Text({
   align,
   color,
   bold,
-  types,
+  type,
   ...props
 }) {
-  if (!styles[`text--type-${type}`]) {
-    throw new Error(`Text: Unknown type - ${type}`);
-  }
-
-  if (color && !styles[`text--color-${color}`]) {
-    throw new Error(`Text: Unknown color - ${color}`);
-  }
-
-  if (transform && !styles[`text--transform-${transform}`]) {
-    throw new Error(`Text: Unknown transform - ${transform}`);
-  }
-
   return (
     <Component
       className={classNames(
@@ -35,7 +23,7 @@ export default function Text({
         bold && styles[`text--bold`],
         styles[`text--type-${type}`],
         styles.text,
-        className
+        className,
       )}
       {...props}
     />

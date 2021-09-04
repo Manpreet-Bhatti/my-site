@@ -12,7 +12,9 @@ export default function Seo({ title, lang }) {
 
   return (
     <Helmet
-      htmlAttributes={{ lang }}
+      htmlAttributes={{
+        lang,
+      }}
       title={title}
       titleTemplate={`${site.siteMetadata.title} | %s`}
       meta={[
