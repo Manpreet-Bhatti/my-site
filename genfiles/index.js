@@ -2,7 +2,7 @@ const fs = require("fs/promises");
 const path = require("path");
 const IGNORE = ["index.js"];
 
-async () => {
+(async () => {
   const files = await fs
     .readdir(__dirname)
     .then((_) => _.filter((f) => !IGNORE.includes(f)));
@@ -10,10 +10,11 @@ async () => {
   try {
     await Promise.all(
       files.map(async (file) => {
-        await require(path.join(__dirname, file));
-      })
+        await require(path.join(__dirname, file))();
+      }),
     );
   } catch (err) {
-    console.error("Error in genfiles");
+    console.error("Error in genfiles!");
+    throw new Error(err);
   }
-};
+})();

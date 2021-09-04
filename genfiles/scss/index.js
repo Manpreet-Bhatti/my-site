@@ -4,6 +4,6 @@ module.exports = function () {
   return fs.writeFile(
     "./src/scss/_env.scss",
     `$primary: #ce2029;
-    $font: "Gilroy", sans-serif;`
+    $font: "Gilroy", sans-serif;`,
   );
 };
