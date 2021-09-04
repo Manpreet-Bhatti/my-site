@@ -1,32 +1,34 @@
 @use './units';
 
-// Add transitions to attributes
+// Add tranisitions to attributes because im lazy
 @mixin transition($attrs, $speed: normal) {
-  $res: "";
+  $res: '';
 
   // Multiple attributes
   @if type-of($attrs) == list {
     @each $attr in $attrs {
       $res: #{$res}, _makeTransition($attr, $speed);
     }
-  }
-  // One/no attribute
-  @else {
-    $res: _makeTransition($attr, $speed);
+
+    // Single/no attribute
+  } @else {
+    $res: _makeTransition($attrs, $speed);
   }
 
   transition: $res;
 }
 
+// Builds a transition with given props
 @function _makeTransition($attr, $speed) {
+  // Default (Please never do this)
   $res: all map-get(units.$speed, $speed) cubic-bezier(0.4, 0, 0.2, 1);
 
-  // Attribute has default props
+  // Attribute with default props
   @if type-of($attr) == string {
     $res: $attr map-get(units.$speed, $speed) cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  // Attribute has custom props
-  @else if type-of($attr) == map {
+
+    // Attribute with custom props
+  } @else if type-of($attr) == map {
     $speed: if(map-has-key($attr, speed), map-get($attr, speed), $speed);
     $res: map-get($attr, name)
       map-get(units.$speed, $speed)
