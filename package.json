@@ -8,8 +8,9 @@
     "gatsby"
   ],
   "scripts": {
+    "comment": "echo 'add npm run generate to start when first beginning development'",
     "format": "prettier --write \"**/*.{js,jsx,scss,mdx}\"",
-    "start": "npm run generate && GATSBY_GRAPHQL_IDE=playground gatsby develop",
+    "start": "GATSBY_GRAPHQL_IDE=playground gatsby develop",
     "build": "npm run generate && gatsby build",
     "serve": "npm run generate && gatsby serve",
     "generate": "node ./genfiles",

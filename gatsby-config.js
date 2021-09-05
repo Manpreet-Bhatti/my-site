@@ -7,6 +7,7 @@ module.exports = {
     keywords,
     author,
   },
+  flags: { PRESERVE_WEBPACK_CACHE: true },
   plugins: [
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-react-svg",
