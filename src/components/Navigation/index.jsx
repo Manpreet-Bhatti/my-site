@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import classNames from "classnames";
 import { ThemeContext } from "../LightOrDark";
-import Logo from "../../images/logo.svg";
+// import Logo from "../../images/logo.svg";
 import Moon from "../../images/DarkMode.svg";
 import Sun from "../../images/LightMode.svg";
 import Container from "../Container";

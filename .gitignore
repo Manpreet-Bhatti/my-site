@@ -67,9 +67,3 @@ yarn-error.log
 .pnp.js
 # Yarn Integrity file
 .yarn-integrity
-
-# Generated files
-src/images/logo.svg
-src/scss/_fonts.scss
-src/scss/_env.scss
-static/fonts/
