@@ -10,7 +10,7 @@
 ![my-site release](https://img.shields.io/github/release/Manpreet-Bhatti/my-site.svg?style=popout-square) ![my-site issues](https://img.shields.io/github/issues/Manpreet-Bhatti/my-site.svg?style=popout-square) ![my-site top language](https://img.shields.io/github/languages/top/Manpreet-Bhatti/my-site.svg?style=popout-square) ![Gatsby](https://img.shields.io/badge/Gatsby-663399?style=for-the-badge&logo=gatsby&logoColor=white) ![my-site last commit](https://img.shields.io/github/last-commit/Manpreet-Bhatti/my-site.svg?style=popout-square) ![my-site license](https://img.shields.io/github/license/Manpreet-Bhatti/my-site.svg?style=popout-square) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
 ### Personal website of Manpreet Bhatti
-Check out this [live demo](https://manpreetbhatti.gatsbyjs.io/) to see my-site in action.
+Check out this [live demo](https://manpreetbhatti.com/) to see my-site in action.
 
 # Getting started
 ### Let's Install
