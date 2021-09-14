@@ -29,8 +29,34 @@ export default function About() {
             ticket documentation and lookup.
           </Text>
         </li>
-        {/* Talk about helping the community and doing development */}
-        {/* Talk about hobby */}
+        <li>
+          <Text className={styles.heading} type="subheading" as="h3">
+            <span role="img" aria-label="handshake">
+              🤝
+            </span>{" "}
+            Community Supporter
+          </Text>
+          <Text type="body">
+            Giving back to my community is reveling; I provide development aide
+            to my local hackathon,{" "}
+            <Link to="https://hackthevalley.io/">Hack The Valley</Link>,
+            together with teaching/mentoring endeavoring developers.
+          </Text>
+        </li>
+        <li>
+          <Text className={styles.heading} type="subheading" as="h3">
+            <span role="img" aria-label="movie camera">
+              🎥
+            </span>{" "}
+            Cinema Admirer
+          </Text>
+          <Text type="body">
+            When I'm not developing, one of my hobbies is to watch movies/tv
+            shows. I like to immerse myself in all types of genres for
+            exploration and critical analysis purposes. That being said, action
+            and sci-fi is the go-to.
+          </Text>
+        </li>
       </ul>
     </Section>
   );

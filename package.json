@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "format": "prettier --write \"**/*.{js,jsx,scss,mdx}\"",
-    "start": "GATSBY_GRAPHQL_IDE=playground gatsby develop",
+    "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean"
