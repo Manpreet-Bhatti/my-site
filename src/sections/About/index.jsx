@@ -53,8 +53,8 @@ export default function About() {
           <Text type="body">
             When I'm not developing, one of my hobbies is to watch movies/tv
             shows. I like to immerse myself in all types of genres for
-            exploration and critical analysis purposes. That being said, action
-            and sci-fi is the go-to.
+            exploration and critical analysis purposes. That being said, action,
+            mystery, and sci-fi are the go-to.
           </Text>
         </li>
       </ul>
