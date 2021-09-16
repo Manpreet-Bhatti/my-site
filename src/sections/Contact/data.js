@@ -13,7 +13,7 @@ export const ContactInfo = [
   },
   {
     title: <>Email</>,
-    content: <>manpreet@bhatti.net</>,
+    content: <>manpreet [at] bhatti.net</>,
     link: "mailto:manpreet@bhatti.net",
   },
 ];
