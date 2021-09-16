@@ -51,7 +51,7 @@ module.exports = {
         background_color: "#ffffff",
         theme_color: "#ce2029",
         display: "minimal-ui",
-        icon: "src/images/mb.png",
+        icon: "src/images/logo.svg",
         icon_options: {
           purpose: "maskable",
         },
