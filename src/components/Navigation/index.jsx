@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import classNames from "classnames";
 import { ThemeContext } from "../LightOrDark";
-// import Logo from "../../images/logo.svg";
+import Logo from "../../images/logo.svg";
 import Moon from "../../images/DarkMode.svg";
 import Sun from "../../images/LightMode.svg";
 import Container from "../Container";
@@ -12,7 +12,7 @@ export default function Navigation() {
   return (
     <Container contentClassName={styles.container} as="nav">
       <div className={styles.logo}>
-        {/* <Logo className={styles.svg} /> */}
+        <Logo className={styles.svg} />
       </div>
       <button
         aria-label="Toggle dark mode"
