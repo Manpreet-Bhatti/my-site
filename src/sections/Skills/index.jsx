@@ -28,7 +28,7 @@ export default function Skills() {
         ))}
       </ul>
       <Text as="p" type="body" color="heading" className={styles.more}>
-        Want to learn more? Check out <Link to="">my resume</Link>.
+        Want to learn more? Check out <Link to="https://res.manpreetbhatti.com/">my resume</Link>.
       </Text>
     </Section>
   );
