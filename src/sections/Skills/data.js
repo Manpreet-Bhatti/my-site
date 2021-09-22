@@ -9,7 +9,6 @@ export const SkillsData = [
       <>JavaScript</>,
       <>TypeScript</>,
       <>SCSS</>,
-      <>Redux</>,
       <>Styled Components</>,
       <>Webpack</>,
       <>HTML5</>,
