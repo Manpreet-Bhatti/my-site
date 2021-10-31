@@ -18,8 +18,14 @@ export default function Skills() {
               {skill.title}
             </Text>
             <ul className={styles.skills}>
-              {skill.content.map((i) => (
-                <Text className={styles.skill} type="meta" key={i} as="li" bold>
+              {skill.content.map((i, contentKey) => (
+                <Text
+                  className={styles.skill}
+                  type="meta"
+                  key={contentKey}
+                  as="li"
+                  bold
+                >
                   {i}
                 </Text>
               ))}
@@ -28,7 +34,8 @@ export default function Skills() {
         ))}
       </ul>
       <Text as="p" type="body" color="heading" className={styles.more}>
-        Want to learn more? Check out <Link to="https://res.manpreetbhatti.com/">my resume</Link>.
+        Want to learn more? Check out{" "}
+        <Link to="https://res.manpreetbhatti.com/">my resume</Link>.
       </Text>
     </Section>
   );
