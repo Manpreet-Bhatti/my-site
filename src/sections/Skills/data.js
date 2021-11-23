@@ -6,7 +6,6 @@ export const SkillsData = [
     content: [
       <>React</>,
       <>Redux</>,
-      <>Ionic</>,
       <>JavaScript</>,
       <>TypeScript</>,
       <>SCSS</>,
