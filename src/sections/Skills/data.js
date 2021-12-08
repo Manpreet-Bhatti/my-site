@@ -23,6 +23,6 @@ export const SkillsData = [
   },
   {
     title: <>Languages</>,
-    content: [<>Python</>, <>C</>, <>SQL</>, <>LaTeX</>],
+    content: [<>Python</>, <>C</>, <>SQL</>],
   },
 ];
