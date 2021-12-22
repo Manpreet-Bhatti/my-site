@@ -10,7 +10,7 @@ export default function Landing() {
         Manpreet Bhatti
       </Text>
       <Text type="subheading" color="primary">
-        Junior Developer @ iVedha
+        An aspiring full-stack developer
       </Text>
     </Section>
   );

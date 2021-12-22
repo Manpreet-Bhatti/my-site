@@ -23,8 +23,8 @@ export default function About() {
             Developer
           </Text>
           <Text type="body">
-            I'm currently a developer at{" "}
-            <Link to="http://www.ivedha.com/">iVedha</Link>, where I work
+            I'm formerly a junior developer at{" "}
+            <Link to="http://www.ivedha.com/">iVedha</Link>, where I worked
             towards creating a NLP search engine and chatbot to quicken support
             ticket documentation and lookup.
           </Text>
