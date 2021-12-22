@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import classNames from "classnames";
-import { ThemeContext } from "../LightOrDark";
+import { modeContext } from "../../pages";
 import Logo from "../../images/logo.svg";
 import Moon from "../../images/DarkMode.svg";
 import Sun from "../../images/LightMode.svg";
@@ -8,7 +8,8 @@ import Container from "../Container";
 import styles from "./Navigation.module.scss";
 
 export default function Navigation() {
-  const [display, setDisplay] = useContext(ThemeContext);
+  const context = useContext(modeContext);
+
   return (
     <Container contentClassName={styles.container} as="nav">
       <div className={styles.logo}>
@@ -16,18 +17,21 @@ export default function Navigation() {
       </div>
       <button
         aria-label="Toggle dark mode"
-        onClick={() => setDisplay(!display)}
+        onClick={() => context.set(!context.get)}
         className={styles.button}
       >
         <Sun
           className={classNames(
-            display && styles["icon--show"],
+            context.get && styles["icon--show"],
             styles["icon--abs"],
             styles.icon,
           )}
         />
         <Moon
-          className={classNames(display || styles["icon--show"], styles.icon)}
+          className={classNames(
+            context.get || styles["icon--show"],
+            styles.icon,
+          )}
         />
       </button>
     </Container>
