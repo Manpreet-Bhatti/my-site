@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import FadeInSection from "../components/FadeInSection";
 import Layout from "../components/Layout";
 import Landing from "../sections/Landing";
 import About from "../sections/About";
@@ -21,10 +22,18 @@ export default function IndexPage() {
   return (
     <modeContext.Provider value={{ get: mode, set: setMode }}>
       <Layout title="Home">
-        <Landing />
-        <About />
-        <Skills />
-        <Contact />
+        <FadeInSection>
+          <Landing />
+        </FadeInSection>
+        <FadeInSection>
+          <About />
+        </FadeInSection>
+        <FadeInSection>
+          <Skills />
+        </FadeInSection>
+        <FadeInSection>
+          <Contact />
+        </FadeInSection>
       </Layout>
     </modeContext.Provider>
   );
