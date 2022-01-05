@@ -20,3 +20,8 @@
 .heading {
   margin: map-get(units.$size, element) 0;
 }
+
+.avatar {
+  width: 40px;
+  margin: 0 -2px -7px -5px;
+}

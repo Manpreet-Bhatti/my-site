@@ -3,6 +3,7 @@ import Section from "../../components/Section";
 import Link from "../../components/Link";
 import Text from "../../components/Text";
 import styles from "./About.module.scss";
+import coding from "../../images/ManpreetCoding.png";
 
 export default function About() {
   return (
@@ -18,7 +19,11 @@ export default function About() {
         <li>
           <Text className={styles.heading} type="subheading" as="h3">
             <span role="img" aria-label="man technologist">
-              👨🏽‍💻
+              <img
+                src={coding}
+                className={styles.avatar}
+                alt="Manpreet in front of a laptop"
+              />
             </span>{" "}
             Developer
           </Text>
