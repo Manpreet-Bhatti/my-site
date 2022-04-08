@@ -28,10 +28,10 @@ export default function About() {
             Developer
           </Text>
           <Text type="body">
-            I'm formerly a junior developer at{" "}
-            <Link to="http://www.ivedha.com/">iVedha</Link>, where I worked
-            towards creating a NLP search engine and chatbot to quicken support
-            ticket documentation and lookup.
+            I'm currently a software developer focusing on front-end at{" "}
+            <Link to="http://www.zonado.com/">Zonado</Link>, where I build
+            features across Zonado's commerical real estate dashboard to make
+            purchasing and searching for properties seamless.
           </Text>
         </li>
         <li>

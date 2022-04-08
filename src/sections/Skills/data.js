@@ -5,6 +5,7 @@ export const SkillsData = [
     title: <>Web/Frameworks</>,
     content: [
       <>React</>,
+      <>Next.js</>,
       <>Redux</>,
       <>JavaScript</>,
       <>TypeScript</>,
