@@ -28,9 +28,9 @@ export default function About() {
             Developer
           </Text>
           <Text type="body">
-            I'm currently a developer - with a focus front-end — at{" "}
-            <Link to="http://www.criticalmass.com/">Critical Mass</Link>, where
-            I build features for Nissan Canada Inc.
+            I'm currently a developer - with a focus front-end — creating
+            features for clients at{" "}
+            <Link to="http://www.criticalmass.com/">Critical Mass</Link>.
           </Text>
         </li>
         <li>
