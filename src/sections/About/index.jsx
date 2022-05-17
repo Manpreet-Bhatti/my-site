@@ -28,10 +28,9 @@ export default function About() {
             Developer
           </Text>
           <Text type="body">
-            I'm currently a software developer focusing on front-end at{" "}
-            <Link to="http://www.zonado.com/">Zonado</Link>, where I build
-            features across Zonado's commerical real estate dashboard to make
-            purchasing and searching for properties seamless.
+            I'm currently a developer - with a focus front-end — at{" "}
+            <Link to="http://www.criticalmass.com/">Critical Mass</Link>, where
+            I build features for Nissan Canada Inc.
           </Text>
         </li>
         <li>
