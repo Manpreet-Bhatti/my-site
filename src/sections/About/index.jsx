@@ -28,8 +28,8 @@ export default function About() {
             Developer
           </Text>
           <Text type="body">
-            I'm currently a developer - with a focus front-end — creating
-            features for clients at{" "}
+            I'm currently a developer - with a focus on front-end — creating
+            features for digital production at{" "}
             <Link to="http://www.criticalmass.com/">Critical Mass</Link>.
           </Text>
         </li>
